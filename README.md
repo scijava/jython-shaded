@@ -50,9 +50,9 @@ So another artifact is available which includes those libraries:
 But both `jython` and `jython-standalone` are __uberjars__, meaning _they
 bundle the dependencies of the project inside the JAR itself_. And they are
 both __unshaded__, meaning _they don't rename the package prefixes of those
-dependencies_. So if you need to use on a different version of those
-dependencies (e.g., because JRuby needs a different version of JFFI), then you
-are out of luck.
+dependencies_. So if you need to use a different version of those dependencies
+(e.g., because JRuby needs a different version of JFFI), then you are out of
+luck.
 
 ### Example
 
