@@ -26,6 +26,14 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.2</version>
+				<configuration>
+					<skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
+				</configuration>
+			</plugin>
 
 			<!-- NB: Shade all of Jython's dependencies, excluding Jython's <foo>.py
 			     classes, because they cause problems with ASM processing. This is
