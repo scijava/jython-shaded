@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-jython-shaded</artifactId>
+		<version>2.5.3-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>jython-deps</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.python</groupId>
+			<artifactId>jython-standalone</artifactId>
+			<version>${jython.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+			<!-- NB: Shade all of Jython's dependencies, excluding Jython's <foo>.py
+			     classes, because they cause problems with ASM processing. This is
+			     OK, because they are wrappers which do not directly reference the
+			     dependencies, and hence do not require bytecode modification. The
+			     resultant artifact will then be consumed by the next module in the
+			     build (org.scijava:jython-shaded) which will readd the <foo>.py
+			     classes unaltered. -->
+			<plugin>
+				<artifactId>maven-shade-plugin</artifactId>
+				<configuration>
+					<filters>
+						<filter>
+							<artifact>org.python:jython-standalone</artifact>
+							<excludes>
+								<exclude>**/*$py.class</exclude>
+							</excludes>
+						</filter>
+					</filters>
+					<relocations>
+						<relocation>
+							<pattern>com.google</pattern>
+							<shadedPattern>org.scijava.jython.shaded.com.google</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>com.kenai</pattern>
+							<shadedPattern>org.scijava.jython.shaded.com.kenai</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>com.xhaus</pattern>
+							<shadedPattern>org.scijava.jython.shaded.com.xhaus</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>com.ziclix</pattern>
+							<shadedPattern>org.scijava.jython.shaded.com.ziclix</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>javatests</pattern>
+							<shadedPattern>org.scijava.jython.shaded.javatests</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>jline</pattern>
+							<shadedPattern>org.scijava.jython.shaded.jline</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>jni</pattern>
+							<shadedPattern>org.scijava.jython.shaded.jni</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>jnr</pattern>
+							<shadedPattern>org.scijava.jython.shaded.jnr</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>org.w3c</pattern>
+							<shadedPattern>org.scijava.jython.shaded.org.w3c</shadedPattern>
+						</relocation>
+					</relocations>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
