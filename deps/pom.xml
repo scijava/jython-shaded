@@ -75,6 +75,10 @@
 							<shadedPattern>org.scijava.jython.shaded.javatests</shadedPattern>
 						</relocation>
 						<relocation>
+							<pattern>javax.xml</pattern>
+							<shadedPattern>org.scijava.jython.shaded.javax.xml</shadedPattern>
+						</relocation>
+						<relocation>
 							<pattern>jline</pattern>
 							<shadedPattern>org.scijava.jython.shaded.jline</shadedPattern>
 						</relocation>
@@ -87,8 +91,16 @@
 							<shadedPattern>org.scijava.jython.shaded.jnr</shadedPattern>
 						</relocation>
 						<relocation>
+							<pattern>org.fusesource</pattern>
+							<shadedPattern>org.scijava.jython.shaded.org.fusesource</shadedPattern>
+						</relocation>
+						<relocation>
 							<pattern>org.w3c</pattern>
 							<shadedPattern>org.scijava.jython.shaded.org.w3c</shadedPattern>
+						</relocation>
+						<relocation>
+							<pattern>org.xml</pattern>
+							<shadedPattern>org.scijava.jython.shaded.org.xml</shadedPattern>
 						</relocation>
 					</relocations>
 				</configuration>
