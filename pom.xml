@@ -51,6 +51,7 @@
 	<properties>
 		<scijava.jvm.version>1.7</scijava.jvm.version>
 		<jython.version>2.7.1</jython.version>
+		<releaseProfiles>sonatype-oss-release</releaseProfiles>
 		<tagNameFormat>jython-shaded-@{project.version}</tagNameFormat>
 	</properties>
 
