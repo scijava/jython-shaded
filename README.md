@@ -1,5 +1,7 @@
-This project provides a rebundled version of the Jython library with shaded
-(i.e., renamed) dependencies. You can use it as follows:
+This project provides a rebundled version of the Jython library (specifically:
+`org.python:jython-standalone`) with shaded (i.e., renamed) dependencies.
+
+You can use it as follows:
 ```
 <dependency>
 	<groupId>org.scijava</groupId>
