@@ -4,7 +4,7 @@ This project provides a rebundled version of the Jython library with shaded
 <dependency>
 	<groupId>org.scijava</groupId>
 	<artifactId>jython-shaded</artifactId>
-	<version>2.7.0</version>
+	<version>2.7.1</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ The naive way to add a Jython dependency is:
 <dependency>
 	<groupId>org.python</groupId>
 	<artifactId>jython</artifactId>
-	<version>2.7.0</version>
+	<version>2.7.1</version>
 </dependency>
 ```
 
@@ -43,7 +43,7 @@ So another artifact is available which includes those libraries:
 <dependency>
 	<groupId>org.python</groupId>
 	<artifactId>jython-standalone</artifactId>
-	<version>2.7.0</version>
+	<version>2.7.1</version>
 </dependency>
 ```
 
