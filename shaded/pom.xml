@@ -11,6 +11,9 @@
 	<artifactId>jython-shaded</artifactId>
 
 	<properties>
+		<main-class>org.python.util.jython</main-class>
+		<package-name>org.python</package-name>
+
 		<!--
 		NB: Skip duplicate class checking. Of course, it would be nice
 		to disable only the BanDuplicateClasses rule and nothing else,
