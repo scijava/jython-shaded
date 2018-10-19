@@ -53,6 +53,17 @@
 			<artifactId>jython-deps</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.jnr</groupId>
+			<artifactId>jffi</artifactId>
+			<version>${jffi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.jnr</groupId>
+			<artifactId>jffi</artifactId>
+			<version>${jffi.version}</version>
+			<classifier>native</classifier>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -64,6 +75,11 @@
 			<plugin>
 				<artifactId>maven-shade-plugin</artifactId>
 				<configuration>
+					<artifactSet>
+						<excludes>
+							<exclude>com.github.jnr:jffi</exclude>
+						</excludes>
+					</artifactSet>
 					<filters>
 						<filter>
 							<artifact>org.python:jython-standalone</artifact>

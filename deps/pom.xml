@@ -50,6 +50,8 @@
 							<artifact>org.python:jython-standalone</artifact>
 							<excludes>
 								<exclude>**/*$py.class</exclude>
+								<exclude>com/kenai/jffi/**</exclude>
+								<exclude>jni/**</exclude>
 							</excludes>
 						</filter>
 					</filters>
