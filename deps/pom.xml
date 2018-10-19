@@ -50,6 +50,7 @@
 							<artifact>org.python:jython-standalone</artifact>
 							<excludes>
 								<exclude>**/*$py.class</exclude>
+								<exclude>META-INF/maven/com.github.jnr/jffi/**</exclude>
 								<exclude>com/kenai/jffi/**</exclude>
 								<exclude>jni/**</exclude>
 							</excludes>
