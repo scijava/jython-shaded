@@ -59,8 +59,8 @@
 							<shadedPattern>org.scijava.jython.shaded.com.google</shadedPattern>
 						</relocation>
 						<relocation>
-							<pattern>com.kenai</pattern>
-							<shadedPattern>org.scijava.jython.shaded.com.kenai</shadedPattern>
+							<pattern>com.kenai.constantine</pattern>
+							<shadedPattern>org.scijava.jython.shaded.com.kenai.constantine</shadedPattern>
 						</relocation>
 						<relocation>
 							<pattern>com.xhaus</pattern>
@@ -81,10 +81,6 @@
 						<relocation>
 							<pattern>jline</pattern>
 							<shadedPattern>org.scijava.jython.shaded.jline</shadedPattern>
-						</relocation>
-						<relocation>
-							<pattern>jni</pattern>
-							<shadedPattern>org.scijava.jython.shaded.jni</shadedPattern>
 						</relocation>
 						<relocation>
 							<pattern>jnr</pattern>
