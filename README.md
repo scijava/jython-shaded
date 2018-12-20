@@ -6,7 +6,7 @@ You can use it as follows:
 <dependency>
 	<groupId>org.scijava</groupId>
 	<artifactId>jython-shaded</artifactId>
-	<version>2.7.1</version>
+	<version>2.7.1.1</version>
 </dependency>
 ```
 
