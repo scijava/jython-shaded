@@ -1,3 +1,8 @@
+___Update 2019-11-04: As of jython 2.7.2b2, a new artifact
+[org.python:jython-slim](https://search.maven.org/search?q=g:org.python%20AND%20a:jython-slim)
+now exists with proper modular dependency structure, which makes this
+jython-shaded project obsolete. :tada: See #7 for details.___
+
 This project provides a rebundled version of the Jython library (specifically:
 `org.python:jython-standalone`) with shaded (i.e., renamed) dependencies.
 
